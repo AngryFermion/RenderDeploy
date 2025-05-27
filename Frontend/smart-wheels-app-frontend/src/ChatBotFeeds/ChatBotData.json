@@ -1,0 +1,12 @@
+{
+    "telemetry": "Telemetry is the process of collecting, transmitting, and receiving data from remote or inaccessible locations for monitoring and analysis. It involves measuring specific parameters (e.g., temperature, speed, pressure, voltage) from a device or system and sending that data to a central system, typically via wireless communication.\n\nTelemetry is widely used in various fields, including:\n\nAerospace: Monitoring spacecraft, rockets, and aircraft performance remotely.\nAutomotive: Collecting data from vehicles, like engine performance, battery status, or sensor readings.\nHealthcare: Remote patient monitoring via wearable devices.\nIoT (Internet of Things): Monitoring smart devices or sensors in real-time.\n\nIn essence, telemetry helps in making informed decisions, ensuring optimal performance, and predicting potential issues by continuously tracking and analyzing data.",
+    
+    "sensorData": "Sensor data refers to information collected from various sensors...",
+    
+    "SmartWheels": "Yes :) , I will help you out.\nSmartWheels is a web application where we can see telemetry data and update the application as well.",
+    
+    "UpdateApplicationwithSrec": "Sure! Using the .Srec file, we will be updating the image file on the board part.",
+    
+    "MQTT": "Certainly! MQTT (Message Queuing Telemetry Transport) is a lightweight, publish-subscribe network protocol designed for constrained devices and low-bandwidth, high-latency, or unreliable networks. It's widely used in IoT (Internet of Things) applications to facilitate communication between devices."
+}    
+  
