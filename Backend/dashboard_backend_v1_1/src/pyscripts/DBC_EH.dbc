@@ -1,0 +1,73 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: EH_FCPS H2eP
+
+
+BO_ 514 EH_2_H2eP_Msg2: 8 EH_FCPS
+ SG_ SV_401_PC_FC_Avl_W : 48|16@1+ (1,0) [0|65535] "W" Vector__XXX
+ SG_ SV_401_IC_FC_Avl_A : 32|9@1+ (1,0) [0|511] "A" Vector__XXX
+ SG_ PV_402_VI_FC_Out_V : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PV_501_Mod_FC_Act : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ PV_401_II_FC_Out_A : 8|9@1+ (1,0) [0|511] "" Vector__XXX
+
+BO_ 513 EH_2_H2eP_Msg1: 8 EH_FCPS
+ SG_ PV_309_TC_Clt_Stk_Out_degC : 8|8@1+ (0.7,-40) [-40|138.5] "degC" Vector__XXX
+ SG_ PV_306_TC_Clt_Stk_In_degC : 0|8@1+ (0.7,-40) [-40|138.5] "degC" Vector__XXX
+
+BO_ 517 H2eP_2_EH: 3 H2eP
+ SG_ SV_501_PC_FC_Usr_Dmd_kW : 8|9@1+ (0.2,0) [0|102.2] "kW"  EH_FCPS
+ SG_ SV_501_Mod_FC_Usr_Dmd : 0|3@1+ (1,0) [0|7] "3bit"  EH_FCPS
+
+
+
+CM_ SG_ 514 SV_401_PC_FC_Avl_W "This tag is sent from EH to EPFL for control of the programable load box coupled to the fuel cell stack in input current control mode
+ 
+The project max current requirement of 180 Amps   
+";
+CM_ SG_ 514 SV_401_IC_FC_Avl_A "This tag is sent from EH to EPFL for control of the programable load box coupled to the fuel cell stack in input current control mode
+ 
+The project max current requirement of 180 Amps   
+";
+CM_ SG_ 514 PV_501_Mod_FC_Act "This tag provides information on the current operating mode of the fuel cell power system 
+0 = Standby ; 1 = Startup ; 2 = Normal ; 3 = Normal Shut Dowm ; 4 = Emergency Shutdowm ";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 100;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 514 20;
+BA_ "GenMsgCycleTime" BO_ 513 20;
+BA_ "GenMsgCycleTime" BO_ 517 20;
+
