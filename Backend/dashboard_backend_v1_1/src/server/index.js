@@ -21,6 +21,7 @@ const mqtt = require("mqtt");
 const path = require("path");
 
 const cors = require("cors");
+
 const { error } = require("console");
 
 const fs = require("node:fs");
@@ -64,7 +65,7 @@ const filePath = path.join(__dirname, "../SREC/Telemetrics.log");
 const app = express();
 app.use(cookieParser());
 
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = ["https://smartwheels-dashboard.onrender.com"];
 
 app.use(
   cors({
