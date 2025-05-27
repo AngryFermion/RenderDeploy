@@ -145,7 +145,7 @@ function Telematics() {
 
     try {
       const response = await fetch(
-        "http://localhost:3006/upload",
+        "https://smartwheels-dashboard-be.onrender.com/upload",
         requestOptions
       );
       if (!response.ok) {
@@ -222,7 +222,7 @@ function Telematics() {
   };
 
   const subscribeChannel = (boardId) => {
-    fetch("http://localhost:3006/subscribeChannels", {
+    fetch("https://smartwheels-dashboard-be.onrender.com/subscribeChannels", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -245,7 +245,7 @@ function Telematics() {
   };
 
   const unSubDeleteId = (deleteId) => {
-    fetch("http://localhost:3006/unsubscribeToTopic", {
+    fetch("https://smartwheels-dashboard-be.onrender.com/unsubscribeToTopic", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -276,7 +276,7 @@ function Telematics() {
   };
 
   const InitilizeData = () => {
-    fetch("http://localhost:3006/InitilizeData", {
+    fetch("https://smartwheels-dashboard-be.onrender.com/InitilizeData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -301,7 +301,7 @@ function Telematics() {
   const stopAwake = () => {
     const message = { msg: "StopAwake" }; // Define your message here
 
-    fetch("http://localhost:3006/StopAwake", {
+    fetch("https://smartwheels-dashboard-be.onrender.com/StopAwake", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -324,7 +324,7 @@ function Telematics() {
   };
 
   const startTelemetry = () => {
-    fetch("http://localhost:3006/StartTelemerty", {
+    fetch("https://smartwheels-dashboard-be.onrender.com/StartTelemerty", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -346,7 +346,7 @@ function Telematics() {
 
   const downloadFile = async () => {
     try {
-      const response = await fetch("http://localhost:3006/downloadLogFile", {
+      const response = await fetch("https://smartwheels-dashboard-be.onrender.com/downloadLogFile", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -372,7 +372,7 @@ function Telematics() {
   };
 
   const startAppendingData = () => {
-    fetch("http://localhost:3006/append-to-file", {
+    fetch("https://smartwheels-dashboard-be.onrender.com/append-to-file", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -406,7 +406,7 @@ function Telematics() {
       body: JSON.stringify({ configBoardId: boardId }),
     };
 
-    fetch("http://localhost:3006/PingDevice", postRequestOptions)
+    fetch("https://smartwheels-dashboard-be.onrender.com/PingDevice", postRequestOptions)
       .then((response) => {
         console.log("HTTP Status Code:", response.status);
         if (response.ok) {
@@ -484,7 +484,7 @@ function Telematics() {
 
   const ReadLoadDbcViwer = async () => {
     try {
-      const response = await fetch("http://localhost:3006/DbcAligner", {
+      const response = await fetch("https://smartwheels-dashboard-be.onrender.com/DbcAligner", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -585,7 +585,7 @@ function Telematics() {
   };
 
   const progressCountCal = () => {
-    fetch("http://localhost:3006/ProgressCount", {
+    fetch("https://smartwheels-dashboard-be.onrender.com/ProgressCount", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -759,7 +759,7 @@ function Telematics() {
       body: JSON.stringify({ message: "Device" }),
     };
 
-    fetch("http://localhost:3006/StartUpdate", postRequestOptions)
+    fetch("https://smartwheels-dashboard-be.onrender.com/StartUpdate", postRequestOptions)
       .then((response) => {
         if (response.ok) {
           return response.text(); // Parse response body as text
