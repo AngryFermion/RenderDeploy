@@ -54,7 +54,7 @@ function CreateAccount() {
   const CheckUserLogin = () => {
     console.log("Checking users....\n");
 
-    fetch("http://localhost:3006/login", {
+    fetch("https://smartwheels-dashboard-be.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
